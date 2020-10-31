@@ -50,7 +50,7 @@ CREATE TABLE Salaries (
 		FOREIGN KEY (emp_no) REFERENCES Employees(emp_no)
 );
 
-SELECT * Table Salaries
+SELECT * FROM Salaries
 
 CREATE TABLE Titles (
 	title_id VARCHAR NOT NULL,
@@ -58,5 +58,5 @@ CREATE TABLE Titles (
 		FOREIGN KEY (title_id) REFERENCES Employees(title_id)
 	);
 
-Select * Table Titles
+Select * FROM Titles
 	
