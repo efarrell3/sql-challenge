@@ -5,7 +5,7 @@ FROM Employees
 INNER JOIN Salaries ON Employees.emp_no = Salaries.emp_no;
 
 -- (2) List employees hired in 1986
-SELECT emp_no, first_name, last_name, hire_date FROM Employees
+SELECT first_name, last_name, hire_date FROM Employees
 WHERE hire_date > '1985-12-31'
 AND hire_date < '1987-01-01';
 
@@ -31,7 +31,7 @@ INNER JOIN Departments ON
 	Department_Manager.dept_no = Departments.dept_no;
 	
 --(5) List name and sex of employees with first name of "Hercules" and last initial "B"\
-SELECT * FROM Employees
+SELECT first_name, last_name, gender FROM Employees
 WHERE first_name = 'Hercules'
 AND last_name LIKE 'B%';
 
