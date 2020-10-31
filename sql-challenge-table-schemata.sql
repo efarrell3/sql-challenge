@@ -16,7 +16,7 @@ CREATE TABLE Employees (
 	PRIMARY KEY (emp_no)
 );
 
-Select * from employees
+SELECT * FROM Employees
 
 CREATE TABLE Departments (
 	dept_no VARCHAR NOT NULL,
@@ -24,7 +24,7 @@ CREATE TABLE Departments (
 	PRIMARY KEY (dept_no)
 );
 
-Select * from departments
+SELECT * FROM departments
 
 CREATE TABLE Department_Employees (
 	emp_no INT NOT NULL,
@@ -33,9 +33,7 @@ CREATE TABLE Department_Employees (
 		FOREIGN KEY (dept_no) REFERENCES Departments (dept_no)
 );
 
-Select * from Department_Employees
-
-Drop Table Department_Manager
+Select * FROM Department_Employees
 
 CREATE TABLE Department_Manager (
 	dept_no VARCHAR NOT NULL,
@@ -44,15 +42,21 @@ CREATE TABLE Department_Manager (
 		FOREIGN KEY (dept_no) REFERENCES Departments (dept_no)
 );
 
+SELECT * FROM Department_Manager
+
 CREATE TABLE Salaries (
 	emp_no int NOT NULL,
 		salary INTEGER Not NULL,
 		FOREIGN KEY (emp_no) REFERENCES Employees(emp_no)
 );
 
+SELECT * Table Salaries
+
 CREATE TABLE Titles (
 	title_id VARCHAR NOT NULL,
 	title VARCHAR NOT NULL,
-	PRIMARY KEY (title_id)
+		FOREIGN KEY (title_id) REFERENCES Employees(title_id)
 	);
+
+Select * Table Titles
 	
